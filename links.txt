@@ -1,0 +1,20 @@
+chair-1 :   https://i.ibb.co/txtSfc4/chair-1.jpg
+chair-2 :   https://i.ibb.co/KVqZ9QN/chair-2.jpg
+chair-3 :   https://i.ibb.co/vwPYKw3/chair-3.jpg
+customers : https://i.ibb.co/WvgQFgt/customers.jpg
+hero :      https://i.ibb.co/MPFMcHN/hero.jpg
+
+Typography: https://typescale.com/
+colors : https://coolors.co/
+          
+          In this website click on Tools In header right side
+          there are more options you can check "Color Contrast Checker"
+
+Icons: https://heroicons.com/
+Design Reference Websites: 
+https://land-book.com/
+https://onepagelove.com/
+https://www.awwwards.com/
+https://screenlane.com/
+https://www.appsignal.com/
+
