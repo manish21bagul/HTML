@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>04 Accordion Component</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #868e96;
+            line-height: 1;
+        }
+        .container {
+            width: 580px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .item {
+            background-color: #f9f9f9;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            border: 1px solid #e9ecef;
+            margin-top: 1px;
+        }
+        .header-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+        }
+        .header-item p {
+            font-weight: 500;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+        .hidden-box {
+            background-color: #fff;
+            padding: 24px;
+            grid-column: 1 / -1;
+            display: none;
+        }
+        .hidden-box p {
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .open .header-item {
+            background-color: #fff;
+            color: #1c7ed6;
+        }
+
+        .open {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="header-item">
+                <p>KL Rahul</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  
+            </div>
+            <div class="hidden-box">
+                <p>Kannanur Lokesh Rahul born 18 April 1992 is an Indian international cricketer who plays as a right-handed Wicketkeeper-Batsman for Karnataka at the domestic level and is the captain for Lucknow Super Giants in the Indian Premier League.</p>
+            </div>
+        </div>
+        <div class="item open">
+            <div class="header-item">
+                <p>Ravindra Jadeja</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+            </div>
+            <div class="hidden-box open">
+                <p>Ravindrasinh Anirudhsinh Jadeja born 6 December 1988 commonly known as Ravindra Jadeja, is an Indian international cricketer who represents the Indian national cricket team in all formats. He is an all-rounder, who bats left-handed and bowls left-arm orthodox spin.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="header-item">
+                <p>Shardul Thakur</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+            </div>
+            <div class="hidden-box">
+                <p>Shardul Narendra Thakur (born 16 October 1991) is an Indian international cricketer. He is a bowler who bats right-handed and bowls right arm medium-fast pace.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="header-item">
+                <p>Jasprit Bumrah</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+            </div>
+            <div class="hidden-box">
+                <p>Jasprit Jasbirsingh Bumrah (born 6 December 1993) is an Indian international cricketer who plays for the Indian cricket team in all formats of the game. A right-arm fast bowler with a unique bowling action, Bumrah is considered one of the best bowlers in the world.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

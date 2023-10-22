@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>08 Accordion Component</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #868e96;
+            line-height: 1;
+        }
+
+        .container {
+            width: 580px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item {
+
+            display: grid;
+            grid-template-columns: 1fr auto;
+            border: 1px solid #e9ecef;
+            margin-top: 1px;
+            column-gap: 20px;
+        }
+
+        .header-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+           /* padding-left: 36px; */
+            gap: 15px;
+        }
+        .header-item p{
+            padding: 20px 24px;
+        }
+        .header-item span {
+            padding: 5px;
+            background-color: #1971c2;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            color:#fff;
+        }
+
+        .hidden-box {
+            background-color: #fff;
+            padding: 24px 48px;
+            grid-column: 1 / -1;
+            border-top: 1px solid #e9ecef;
+            display: none;
+            grid-template-columns: auto;
+            column-gap: 20px;
+            align-items: center;
+            row-gap: 20px;
+
+        }
+
+        .hidden-box p {
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .hidden-box ul{
+            display: flex;
+            list-style: number;
+            flex-direction: column;
+            font-size: 14px;
+            gap: 15px;
+            padding-left: 24px;
+        }
+
+        /* .img1 {
+            width: 100px;
+            height: 100px;
+        } */
+
+        /* .open .header-item {
+            background-color: #fff;
+            color: #1c7ed6;
+        } */
+
+        .open .hidden-box{
+            display: grid;
+
+        }
+        .open .header-item span {
+           background-color:#f1f3f5;
+        }
+        .open .header-item span > .icon {
+           color: #495057}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="header-item">
+                <p>Getting started with React</p>
+                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg></span>
+            </div>
+            <div class="hidden-box">
+                <p>Getting Started with React 6. Sounds Great! Now What Do I Do? You've picked React as the framework
+                    for your next project. Great! But life is more ...</p>
+            </div>
+        </div>
+        <div class="item open">
+            <div class="header-item">
+                <p>Basic Components</p>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                </span>
+
+            </div>
+            <div class="hidden-box">
+                <p>Components are the building blocks of React apps. They provide the basic structure that you'll use to
+                    build your app's UI, and they are reusable to compose them ...</p>
+                    <ul>
+                        <li>Checkbox</li>
+                        <li>Radio buttons</li>
+                        <li>Toggle / Switch</li>
+                        <li>Text fields</li>
+                        <li>Buttons</li>
+                        <li>Drop-down list</li>
+                        <li>Forms</li>
+                        <li>Search bar</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="item">
+            <div class="header-item">
+                <p>State management</p>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                </span>
+            </div>
+            <div class="hidden-box">
+                <p>Learn state management in React · You can control how your app works by handling the data flow with
+                    ease. · You can take advantage of efficient (and testable) ...</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="header-item">
+                <p>Render props</p>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                </span>
+            </div>
+            <div class="hidden-box">
+                <p>Render props is a technique for sharing code between components in React.js. The term “render prop”
+                    refers to a function that returns a value that may be used ...</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

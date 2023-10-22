@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>05 Accordion Component</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1;
+            color: #868e96;
+        }
+        .main {
+            background-color: #f8f9fa;
+            padding: 50px;
+        }
+        .container {
+            width: 580px;
+            margin: 100px auto;
+        }
+
+        .item {
+            display: grid;
+        }
+        .header-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 24px;
+            gap: 10px;
+            background-color: transparent;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+        /* .title {} */
+        .hidden-box {
+            padding: 24px 58px;
+            
+            display: none;
+        }
+
+        .hidden-box p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .open .header-item{
+            color: #343a40;
+            border-bottom: none;
+        }
+        .open .header-item .icon{color:#1971c2;} 
+        .open .hidden-box {
+            /* background: #1971c2; */
+            color: #868e96;
+        }
+        .open .hidden-box {display: block};
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="item">
+                <div class="header-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      
+                    <p class="title">Mohammed Siraj</p>
+                </div>
+                <div class="hidden-box">
+                    <p>
+                        Mohammed Siraj (born 13 March 1994) is an Indian international cricketer who joined the Indian national cricket team in 2017 as a Right-arm fast bowler.
+                    </p>
+                </div>
+            </div>
+            <div class="item open">
+                <div class="header-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm3 10.5a.75.75 0 000-1.5H9a.75.75 0 000 1.5h6z" clip-rule="evenodd" />
+                      </svg>
+                    <p class="title">Kuldeep Yadav</p>
+                </div>
+                <div class="hidden-box">
+                    <p>Kuldeep Yadav (born 14 December 1994) is an Indian international cricketer. He is a bowling allrounder who bowls Left-arm Chinaman spin and is a capable lower order batter who plays for India and for Uttar Pradesh in domestic cricket.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="header-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    <p class="title">Mohammed Shami</p>
+                </div>
+                <div class="hidden-box">
+                    <p>Mohammed Shami Ahmed (born 3 September 1990) is an Indian international cricketer who plays for the Indian national cricket team in all formats of the game as a right-arm fast bowler.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="header-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    <p class="title">R. Ashwin</p>
+                </div>
+                <div class="hidden-box">
+                    <p>Ravichandran Ashwin (born 17 September 1986) is an Indian international cricketer from Chennai, who plays for the India cricket team. In Indian domestic cricket he plays for Tamil Nadu and for Rajasthan Royals in the Indian Premier League</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="header-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    <p class="title">Ishan Kishan</p>
+                </div>
+                <div class="hidden-box">
+                    <p>Ishan Kishan (born 18 July 1998) is an Indian international cricketer who plays for the Indian national cricket team as a wicket-keeper batsman. He made his international debut in March 2021 against England.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

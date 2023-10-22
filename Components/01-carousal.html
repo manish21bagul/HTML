@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 Carosuel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+        */
+
+        /* MAIN COLOR: #087f5b 
+          GRAY COLOR :#343a40
+        */
+        /* ------------------------ */
+        /* GENERAL STYLES */
+        /* ------------------------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #343a40;
+            line-height: 1;
+        }
+
+        .carosuel {
+            width: 800px;
+            margin: 100px auto;
+            /* border: 1px solid red; */
+            display: flex;
+            /* gap:30px; */
+            align-items: center;
+            background-color: #212529;
+            position: relative;
+        }
+
+        img {
+            height: 250px;
+        }
+
+        .slider {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color:#fff;
+            padding: 48px;
+        }
+        .slider h3{
+            font-size: 500;
+            font-size: 16px;
+        }
+        .slider p {
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        .btn {
+            width: 48px;
+            height: 48px;
+            border: none;
+            background-color: #ced4da;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+            position: absolute;
+            top:50%;
+        }
+        .btn--left{
+            transform: translate(-50%, -50%);
+            left: 0;
+        }
+        .btn--right{
+            transform: translate(50%, -50%);
+            right: 0;
+        }
+       
+        .btn-icon { width: 24px; height: 24px; stroke: #fff;}
+        .dots{
+            position: absolute;
+            display: flex;
+            gap:15px;
+            left:50%;
+            transform: translate(-50%, 40px);
+            bottom: 0;
+        }
+        .dot{
+            width: 50px;
+            height: 10px;
+            background-color: #fff;
+            border: 2px solid #1971c2;
+            border-radius: 20px;
+        }
+        .active{
+            background-color: #1971c2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carosuel">
+        <div class="slider">
+            <h3>Recommended for You</h3>
+            <p>
+                When you're in the mood for a meal loaded with contrasting flavors, textures, and an element of novelty, the same old options just won't cut it. Looking to cultures around the world for culinary inspiration is an exciting way to stimulate your taste buds.
+            </p>
+        </div>
+        <img src="hero.jpg" alt="Salad">
+        <button class="btn btn--left"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="btn-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+        <button class="btn btn--right active">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="btn-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+        <div class="dots">
+            <button class="dot active">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+        </div>
+    </div>
+</body>
+
+</html>
